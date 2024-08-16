@@ -1,21 +1,19 @@
-import './App.css';
 import React, { useState, useRef } from 'react';
-
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-import { getFirestore, collection, query, orderBy, limit, addDoc, serverTimestamp } from 'firebase/firestore';
-
+import { initializeApp } from "firebase/app";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, limit } from "firebase/firestore";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+// Firebase configuration with placeholders
 const firebaseConfig = {
-  apiKey: "AIzaSyD323vRJv9887_YfCiJXM3nkGhzOCZPci4",
-  authDomain: "superchat-d614e.firebaseapp.com",
-  projectId: "superchat-d614e",
-  storageBucket: "superchat-d614e.appspot.com",
-  messagingSenderId: "326447354170",
-  appId: "1:326447354170:web:634c763806615985fdc003",
-  measurementId: "G-J4SB98RV1T"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "your-api-key-here",
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "your-auth-domain-here",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "your-project-id-here",
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "your-storage-bucket-here",
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "your-messaging-sender-id-here",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID || "your-app-id-here",
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID || "your-measurement-id-here"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -84,7 +82,6 @@ function ChatRoom() {
       <main>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
         <span ref={dummy}></span>
-        
       </main>
 
       <form onSubmit={sendMessage}>
