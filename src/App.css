@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+  background-color: #cce6ff; /* Light Baby Blue */
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.App header {
+  background-color: #6699cc; /* Medium Baby Blue */
+  height: 10vh;
+  min-height: 50px;
+  color: #ffffff; /* White text for contrast */
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 8px; /* Adjusted padding */
+  box-sizing: border-box;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #cce6ff; /* Light Baby Blue */
+}
+
+main {
+  padding: 8px; /* Adjusted padding */
+  height: 70vh; /* Adjusted height for the chatbot box */
+  margin: 8vh 0 8vh; /* Adjusted margins */
+  background-color: #ffffff; /* White background for chat box */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px; /* Rounded corners for a softer look */
+  position: relative;
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #cce6ff; /* Light Baby Blue */
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6699cc; /* Medium Baby Blue */
+}
+
+form {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff; /* White background */
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  font-size: 1rem; /* Smaller font size */
+  border-top: 2px solid #6699cc; /* Medium Baby Blue border */
+}
+
+form button {
+  width: 20%;
+  background-color: #6699cc; /* Medium Baby Blue */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  padding: 8px 16px; /* Adjusted padding */
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1rem; /* Smaller font size */
+  background: #ffffff; /* White background */
+  color: #6699cc; /* Medium Baby Blue text */
+  outline: none;
+  border: none;
+  padding: 0 8px; /* Adjusted padding */
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background-color: #6699cc; /* Medium Baby Blue */
+  border: none;
+  color: #ffffff; /* White text for contrast */
+  padding: 12px 24px; /* Adjusted padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.875rem; /* Smaller font size */
+  font-family: 'Poppins', sans-serif;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: #6699cc; /* Medium Baby Blue */
+  background: #ffffff; /* White background */
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+ul, li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 10px; /* Adjusted margin */
+  line-height: 20px; /* Adjusted line height */
+  padding: 8px 16px; /* Adjusted padding */
+  border-radius: 20px; /* Adjusted border radius */
+  position: relative;
+  color: #6699cc; /* Medium Baby Blue */
+  text-align: center;
+  font-size: 0.75rem; /* Smaller font size for messages */
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px; /* Adjusted padding */
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: #ffffff; /* White text for contrast */
+  background: #6699cc; /* Medium Baby Blue */
+  align-self: flex-end;
+}
+
+.received p {
+  background: #ffffff; /* White background */
+  color: #6699cc; /* Medium Baby Blue */
+}
+
+img {
+  width: 36px; /* Adjusted size */
+  height: 36px; /* Adjusted size */
+  border-radius: 50%;
+  margin: 2px 5px;
+}
